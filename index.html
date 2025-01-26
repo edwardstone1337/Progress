@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Single-Line Notched Progress Bars</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Months of Year (12) -->
+    <div class="progress-row">
+      <div class="progress-label">
+        <span class="label-text">YEAR PROGRESS</span> 
+        
+        <div class="percentage-container">
+          <span class="percentage-value" id="monthOfYearValue"></span><span class="percentage-value">%</span>
+        </div>
+
+      </div>
+      <div class="segments" id="monthOfYearSegments"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
