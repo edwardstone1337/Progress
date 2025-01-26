@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --muted-text: #9CA3AF;  /* AAA compliant grey */
+}
+
 body {
   background-color: #1E1E1E;
   color: #FFFFFF;
@@ -45,7 +49,7 @@ body {
 .segments {
   width: 100%;
   display: flex;
-  gap: 4px;
+  gap: 8px;
   margin-top: 12px;
 }
 
@@ -53,7 +57,7 @@ body {
 .segment {
   flex: 1;
   height: 4px;
-  background-color: #57534E;
+  background-color: var(--muted-text);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -67,7 +71,7 @@ body {
 }
 
 .label-text {
-  color: #57534E;
+  color: var(--muted-text);
   font-size: 14px;
 }
 
@@ -76,17 +80,43 @@ body {
   font-size: 14px;
 }
 
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  position: fixed;
+  bottom: 16px; /* Match body padding */
+  left: 16px; /* Match body padding */
+  right: 16px; /* Match body padding */
+}
+
+.homepage-message {
+  margin-bottom: 0; /* Remove the previous margin since we're using gap now */
+}
+
+.homepage-message .label-text {
+  color: var(--muted-text);
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+}
+
 .homepage-button {
-  margin-top: 32px; /* Change from auto to fixed margin */
+  margin: 0 auto;
   padding: 8px 16px;
-  border: 1px solid #57534E;
+  border: 1px solid var(--muted-text);
   border-radius: 8px;
   background: transparent;
   color: white;
   cursor: pointer;
   font-family: 'Inter', sans-serif;
+  width: fit-content;
 }
 
 .homepage-button:hover {
   border: 1px solid white;
+}
+
+.highlight {
+  color: #FFFFFF;
 }
