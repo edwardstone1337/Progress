@@ -71,4 +71,18 @@ function fillSegments(segmentFills, unitsCompleted) {
 function isLeapYear(year) {
     return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 }
+
+function setHomePage() {
+    try {
+        if (window.chrome) {
+            alert("To set as homepage in Chrome:\n1. Click the three dots in the top-right\n2. Go to Settings\n3. Click 'On startup'\n4. Select 'Open a specific page or set of pages'\n5. Add this page's URL");
+        } else if (window.sidebar) {
+            alert("To set as homepage in Firefox:\n1. Click the menu button\n2. Click Settings\n3. Under 'Home', click 'Homepage and new windows'\n4. Enter this page's URL");
+        } else {
+            alert("To set as homepage, please check your browser's settings menu.");
+        }
+    } catch (e) {
+        alert("To set as homepage, please check your browser's settings menu.");
+    }
+}
   

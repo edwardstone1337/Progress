@@ -8,37 +8,35 @@
 body {
   background-color: #1E1E1E;
   color: #FFFFFF;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
   padding: 16px;
   min-height: 100vh;  /* Make body full viewport height */
   display: flex;      /* Enable flexbox */
-  align-items: center;/* Center vertically */
+  flex-direction: column;
+  align-items: center;
   margin: 0;         /* Remove default margin */
 }
 
 .container {
+  width: 100%;
   max-width: 600px;
-  margin: 0 auto;    /* Center horizontally */
-  width: 100%;       /* Take full width up to max-width */
+  box-sizing: border-box;
+  flex: 1;
   display: flex;
-  flex-direction: column;
-  gap: 24px; /* spacing between different progress rows */
+  align-items: center;
 }
 
 /* Progress row container */
 .progress-row {
-  margin-bottom: 24px;
+  width: 100%;
 }
 
 /* Progress label styling */
 .progress-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 16px;
   display: flex;
-  gap: 8px;  /* Add spacing between label and value */
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 /* Segments container */
@@ -46,6 +44,7 @@ body {
   width: 100%;
   display: flex;
   gap: 4px;
+  margin-top: 12px;
 }
 
 /* Individual segment styling */
@@ -67,8 +66,25 @@ body {
 
 .label-text {
   color: #57534E;
+  font-size: 14px;
 }
 
 .percentage-value {
   color: #FFFFFF;
+  font-size: 14px;
+}
+
+.homepage-button {
+  margin-top: auto;
+  padding: 8px 16px;
+  border: 1px solid #57534E;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+}
+
+.homepage-button:hover {
+  border: 1px solid white;
 }
